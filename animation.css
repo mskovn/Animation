@@ -1,0 +1,112 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#scene {
+    width: 100vw;
+    height: 56.25vw;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+#baggrund {
+    width: 100%;
+    height: 100%;
+    background-image: url(baggrund-01.svg);
+    background-size: 100% 100%;
+}
+
+#skyer {
+    position: absolute;
+
+    width: 100vw;
+    height: 80vw;
+    background-image: url(skyer.svg);
+    background-size: 100%;
+    transform: translateY(-58vw);
+    animation-name: skyer;
+    animation-duration: 50s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+#mellemgrund {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(mellemgrund-01.svg);
+    background-size: 100% 100%;
+    transform: translateY(-56vw);
+    z-index: 1;
+}
+
+
+#forgrund {
+    width: 100%;
+    height: 100%;
+    background-image: url(forgrund-01.svg);
+    background-size: 100% 100%;
+    transform: translateY(-55vw);
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+@keyframes skyer {
+    from {
+        left: 100vw;
+    }
+
+    to {
+        left: -60vw;
+    }
+}
+
+#fugleskraemsel {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 50vw;
+    top: 13vw;
+    left: 13vw;
+    background-image: url(fugleskraemsel-01.svg);
+    background-size: 100% 100%;
+
+}
+
+#fugl {
+    position: absolute;
+    z-index: 1;
+    width: 50vw;
+    height: 25vw;
+    top: 38vw;
+    left: 38vw;
+    background-image: url(fugl.svg);
+    background-size: 100% 100%;
+    transform: translateX(17vw);
+    animation-name: fugl;
+    animation-duration: 5s;
+    /*animation-iteration-count: infinite;*/
+    animation-timing-function: linear;
+
+}
+
+@keyframes fugl {
+    from {
+        left: 20vw;
+        top: -2vw;
+        transform: scale(0.02)
+    }
+
+    to {
+        left: 38vw;
+
+
+    }
+}
